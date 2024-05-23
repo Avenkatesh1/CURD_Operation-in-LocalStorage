@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  ElementRef,  ViewChild} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,11 +10,19 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'CRUD-With_Local-Storage';
-
+  // @ViewChild('myModle') modle : ElementRef | undefined;
+  
   openModel(){
     const model = document.getElementById("myModal");
     if(model != null){
       model.style.display = 'block'
+    }
+  }
+
+  closeModle(){
+    const model = document.getElementById("myModal");
+    if(model != null){
+      model.style.display = 'none';
     }
   }
 }
