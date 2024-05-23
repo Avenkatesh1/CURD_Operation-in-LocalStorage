@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'CRUD-With_Local-Storage';
+
+  openModel(){
+
+  }
 }
