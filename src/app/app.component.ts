@@ -12,6 +12,9 @@ export class AppComponent {
   title = 'CRUD-With_Local-Storage';
 
   openModel(){
-
+    const model = document.getElementById("myModal");
+    if(model != null){
+      model.style.display = 'block'
+    }
   }
 }
