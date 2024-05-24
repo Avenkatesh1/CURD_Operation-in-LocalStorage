@@ -11,12 +11,16 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'CRUD-With_Local-Storage';
   // @ViewChild('myModle') modle : ElementRef | undefined;
-  
+  @ViewChild("myModle") modles :ElementRef | undefined;
+
   openModel(){
     const model = document.getElementById("myModal");
     if(model != null){
       model.style.display = 'block'
     }
+    // if(this.modles != null){
+    //   this.modles.nativeElement.style.display = 'block'
+    // }
   }
 
   closeModle(){
@@ -24,5 +28,8 @@ export class AppComponent {
     if(model != null){
       model.style.display = 'none';
     }
+    //  if(this.modles != null){
+    //   this.modles.nativeElement.style.display = "none"
+    //  }
   }
 }
