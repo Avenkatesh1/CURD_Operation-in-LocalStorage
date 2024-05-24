@@ -33,3 +33,23 @@ export class AppComponent {
     //  }
   }
 }
+
+export class student {
+  name:string;
+  email:string;
+  mobilenumber:string;
+  city:string;
+  state:string;
+  adders:string;
+  pincode:string;
+
+  constructor(){
+    this.name ="";
+    this.email ="";
+    this.mobilenumber="";
+    this.city ="";
+    this.state ="";
+    this.adders ="";
+    this.pincode ="";
+  }
+}
