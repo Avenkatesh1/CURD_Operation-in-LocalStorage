@@ -9,28 +9,30 @@
   </div>
 </div>
 
-<div class="row m-2 p-3">
-  <div class="col-3">
-    <div class="card">
-      <div class="card-header">
-        <div class="row">
-          <div class="col-6">
-            Student Name
-          </div>
-          <div class="col-6 text-end">
-            Mobile No.
+<div class="row p-3 m-3">
+  @for (item of studentList; track $index) {
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-6">
+              {{item.name}}
+            </div>
+            <div class="col-6 text-end">
+              {{item.mobilenumber}}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card-body">
-        <p>city, state, pincode</p>
-        <p>Adders</p>
-      </div>
-      <div class="card-footer text-center">
-        Enail:
+        <div class="card-body">
+          <p>{{item.city}}, {{item.state}},{{item.pincode}} </p>
+          <p>{{item.adders}}</p>
+        </div>
+        <div class="card-footer text-center">
+          {{item.email}}
+        </div>
       </div>
     </div>
-  </div>
+  }
 </div>
 
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
