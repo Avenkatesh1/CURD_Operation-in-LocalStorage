@@ -46,9 +46,43 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModle()"></button>
       </div>
       <div class="modal-body">
-        Modal body..
+        <div class="row">
+          <div class="col-6">
+            <label for="">Name</label>
+            <input type="text" class="form-control" placeholder="Name....">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="">Mobile-No:</label>
+            <input type="number" class="form-control" placeholder="Enter you Mobil-No....">
+          </div>
+          <div class="col-6">
+            <label for="">Email:</label>
+            <input type="email" class="form-control" placeholder="Enter_your-Email....">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label for="">City:</label>
+            <input type="text" class="form-control" placeholder="City-Name....">
+          </div>
+          <div class="col-4">
+            <label for="">State:</label>
+            <input type="text" class="form-control" placeholder="State....">
+          </div>
+          <div class="col-4">
+            <label for="">Pincode:</label>
+            <input type="text" class="form-control" placeholder="Pincode:....">
+          </div>
+        </div>
+        <div class="row">
+          <label for="">Adders:</label>
+          <textarea name="Adders" id="" rows="3" class="form-control" placeholder="Place_Your-Comment"></textarea>
+        </div>
       </div>
       <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="saveModle()">Add</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModle()">Close</button>
       </div>
     </div>
