@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'CRUD-With_Local-Storage';
   // @ViewChild('myModle') modle : ElementRef | undefined;
   @ViewChild("myModle") modles :ElementRef | undefined;
+  studentobj: student = new student();
 
   openModel(){
     const model = document.getElementById("myModal");
@@ -31,6 +32,10 @@ export class AppComponent {
     //  if(this.modles != null){
     //   this.modles.nativeElement.style.display = "none"
     //  }
+  }
+
+  saveModle(){
+    console.log(student)
   }
 }
 
