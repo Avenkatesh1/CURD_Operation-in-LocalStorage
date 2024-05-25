@@ -49,40 +49,42 @@
         <div class="row">
           <div class="col-6">
             <label for="">Name</label>
-            <input type="text" class="form-control" placeholder="Name....">
+            <input type="text" [(ngModel)]="studentobj.name" class="form-control" placeholder="Name....">
           </div>
         </div>
         <div class="row">
           <div class="col-6">
             <label for="">Mobile-No:</label>
-            <input type="number" class="form-control" placeholder="Enter you Mobil-No....">
+            <input type="number" [(ngModel)]="studentobj.mobilenumber" class="form-control" placeholder="Enter you Mobil-No....">
           </div>
           <div class="col-6">
             <label for="">Email:</label>
-            <input type="email" class="form-control" placeholder="Enter_your-Email....">
+            <input type="email" [(ngModel)]="studentobj.email" class="form-control" placeholder="Enter_your-Email....">
           </div>
         </div>
         <div class="row">
           <div class="col-4">
             <label for="">City:</label>
-            <input type="text" class="form-control" placeholder="City-Name....">
+            <input type="text" [(ngModel)]="studentobj.city" class="form-control" placeholder="City-Name....">
           </div>
           <div class="col-4">
             <label for="">State:</label>
-            <input type="text" class="form-control" placeholder="State....">
+            <input type="text" [(ngModel)]="studentobj.state" class="form-control" placeholder="State....">
           </div>
           <div class="col-4">
             <label for="">Pincode:</label>
-            <input type="text" class="form-control" placeholder="Pincode:....">
+            <input type="text" [(ngModel)]="studentobj.pincode" class="form-control" placeholder="Pincode:....">
           </div>
         </div>
         <div class="row">
-          <label for="">Adders:</label>
-          <textarea name="Adders" id="" rows="3" class="form-control" placeholder="Place_Your-Comment"></textarea>
+          <div class="col-12">
+            <label for="">Adders:</label>
+            <textarea name="Adders" id="" rows="3" [(ngModel)]="studentobj.adders" class="form-control" placeholder="Place_Your-Comment"></textarea>
+          </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="saveModle()">Add</button>
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="saveStudents()">Save Student</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModle()">Close</button>
       </div>
     </div>
