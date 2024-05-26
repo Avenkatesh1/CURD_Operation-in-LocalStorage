@@ -30,7 +30,15 @@
           <p>{{item.adders}}</p>
         </div>
         <div class="card-footer text-center">
-          {{item.email}}
+          <div class="row">
+            <div class="col-6">
+              <p> {{item.email}} </p>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-sm btn-primary">Edit</button>&nbsp;
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -38,7 +46,7 @@
 </div>
 }@else {
   <div class="row">
-    <div class="col-12 p-4 text-bg-danger text-center">
+    <div class="col-12 p-4 text-center" style="color: red;">
       <h3>No Record Found. Create New Records</h3>
     </div>
   </div>
