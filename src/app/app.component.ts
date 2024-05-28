@@ -78,6 +78,9 @@ export class AppComponent implements OnInit {
       localStorage.setItem('angular17crud', JSON.stringify(this.studentList));
      }
   }
+  updateStudents(){
+    
+    }
 }
 
 export class student {
