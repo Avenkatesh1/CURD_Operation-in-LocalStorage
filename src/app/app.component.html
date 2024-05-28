@@ -35,8 +35,8 @@
               <p> {{item.email}} </p>
             </div>
             <div class="col-6">
-              <button class="btn btn-sm btn-primary">Edit</button>&nbsp;
-              <button class="btn btn-sm btn-danger">Delete</button>
+              <button class="btn btn-sm btn-primary" (click)="onEdit(item)">Edit</button>&nbsp;
+              <button class="btn btn-sm btn-danger" (click)="onDelete(item)">Delete</button>
             </div>
           </div>
         </div>

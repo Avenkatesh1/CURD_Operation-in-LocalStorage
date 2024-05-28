@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
     const isLocalPresent = localStorage.getItem("angular17crud");
     if(isLocalPresent != null){
       const oldArray = JSON.parse(isLocalPresent);
+      this.studentobj.id =oldArray.length + 1;
       oldArray.push(this.studentobj);
       this.studentList = oldArray
       localStorage.setItem('angular17crud', JSON.stringify(oldArray));
@@ -57,14 +58,30 @@ export class AppComponent implements OnInit {
     }else{
       const newArray = [];
       newArray.push(this.studentobj);
+      this.studentobj.id = 1;
       this.studentList = newArray
       localStorage.setItem('angular17crud', JSON.stringify(newArray));
     }
     this.closeModle();
   }
+   
+  onEdit(item:student){
+    this.studentobj=item;
+    this.openModel()
+  }
+
+  onDelete(item:student){
+     const isDelete = confirm("Are you Sure, You want to Delete");
+     if(isDelete){
+      const currentdata = this.studentList.findIndex(m=> m.id === this.studentobj.id);
+      this.studentList.splice(currentdata,1);
+      localStorage.setItem('angular17crud', JSON.stringify(this.studentList));
+     }
+  }
 }
 
 export class student {
+  id:number
   name:string;
   email:string;
   mobilenumber:string;
@@ -74,6 +91,7 @@ export class student {
   pincode:string;
 
   constructor(){
+    this.id =0
     this.name ="";
     this.email ="";
     this.mobilenumber="";
