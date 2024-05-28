@@ -100,8 +100,12 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="saveStudents()">Save Student</button>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModle()">Close</button>
+        @if (studentobj.id ==0) {
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" (click)="saveStudents()">Save Student</button>
+        }@else {
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" (click)="updateStudents()">Update Student</button>
+        }
       </div>
     </div>
   </div>
