@@ -79,8 +79,19 @@ export class AppComponent implements OnInit {
      }
   }
   updateStudents(){
-    
+    const currentRecord = this.studentList.find(m=> m.id === this.studentobj.id);
+    if(currentRecord != undefined){
+      currentRecord.name = this.studentobj.name;
+      currentRecord.adders = this.studentobj.adders;
+      currentRecord.mobilenumber = this.studentobj.mobilenumber;
+      currentRecord.email = this.studentobj.email;
+      currentRecord.city = this.studentobj.city;
+      currentRecord.state = this.studentobj.state;
+      currentRecord.pincode = this.studentobj.pincode;
     }
+    localStorage.setItem('angular17crud', JSON.stringify(this.studentList));
+    this.closeModle()
+  }
 }
 
 export class student {
